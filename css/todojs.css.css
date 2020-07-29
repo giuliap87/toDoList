@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    #ff7675,
+    #ff8c5d,
+    #ffaa40,
+    #fdcb6e,
+    #ffeaa7
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.app-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  background-color: #f7f7f7;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*main content*/
+
+.app-name {
+  background-color: #ff7675;
+  color: #ffffff;
+  padding: 10px, 20px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* plus icon */
+
+.plus {
+  float: right;
+  margin: 0;
+  font-size: 27px;
+}
+
+/*list*/
+
+.todo-list {
+  list-style: none;
+}
+
+/*dinamically created li and span for delete btn*/
+
+li {
+  background-color: #ffff;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+  padding-left: 20px;
+  width: 340px;
+  user-select: none;
+}
+
+li:nth-child(2) {
+  background-color: #f3f1f1;
+}
+
+span {
+  float: right;
+  padding: 0 10px 0 10px;
+  user-select: none;
+}
+
+span:hover {
+  background-color: #ff7675;
+  color: #ffff;
+}
+
+/*input style*/
+
+.add-todo-input {
+  font-size: 15px;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  color: #ff7675b9;
+  border: 3px solid rgba(0, 0, 0, 0);
+  margin: 0;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.add-todo-input:focus {
+  background: #ffff;
+  border: 3px solid #ff7675;
+  outline: none;
+}
+
+/*delete all button*/
+
+.delete-all-btn {
+  height: 40px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  line-height: 40px;
+  width: 100%;
+  color: #666;
+  border-spacing: 2px;
+  outline: transparent;
+  text-transform: uppercase;
+}
+
+/*hide and show input when clicking on plus icon*/
+
+.fade {
+  display: none;
+}
+
+/*line-through toggle class for completed tasks*/
+
+.completed {
+  color: rgb(128, 128, 128);
+  text-decoration: line-through;
+}
